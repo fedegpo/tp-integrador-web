@@ -25,12 +25,19 @@
             background-color: white;
         }
 
-        .logo h1 {
-            font-size: 36px;
+        .logo {
+            font-size: 22px;
             color: red;
             font-weight: bold;
             font-style: italic;
+            text-decoration: none;
         }
+
+        .logo a  {
+            text-decoration: none;
+            color: inherit;
+        }
+
 
         nav ul {
             list-style: none;
@@ -58,7 +65,7 @@
             border-radius: 1.5rem;
         }
 
-        .main-title {
+        .titulo {
             font-size: 128px;
             font-weight: bold;
             display: flex;
@@ -66,23 +73,23 @@
             width: 100%;
         }
 
-        .recommendation {
+        .recomendacion {
             margin: 3.5em 0;
         }
 
-        .recommendation h2 {
+        .recomendacion h2 {
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 20px;
             color: white;
         }
 
-        .recommendation a{
+        .recomendacion a {
             text-decoration: none;
             color: inherit;
         }
 
-        .product-card {
+        .producto-tarjeta {
             background-color: white;
             padding: 20px;
             border-radius: 10px;
@@ -90,18 +97,18 @@
             text-align: left;
         }
 
-        .product-image {
+        .producto-imagen {
             width: 100%;
             height: auto;
             max-width: 300px;
         }
 
-        .product-info h3 {
+        .info-producto h3 {
             font-size: 20px;
             margin: 10px 0;
         }
 
-        .product-info p {
+        .info-producto p {
             font-size: 16px;
             color: gray;
         }
@@ -118,26 +125,24 @@
 
 <body>
     <header>
-        <div class="logo">
-            <h1>Flugel</h1>
-        </div>
+        <div class="logo"><a href="index.html"><h1>Flugel</h1></a></div>
         <nav>
             <ul>
-                <li><a href="#">Nosotros</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1 class="main-title">VELOCIDAD FLUGEL</h1>
+        <h1 class="titulo">VELOCIDAD FLUGEL</h1>
         <section class="hero">
-            <div class="recommendation">
+            <div class="recomendacion">
                 <a href="">
                     <h2>NUESTRA RECOMENDACIÓN</h2>
-                    <div class="product-card">
-                        <img src="images/bike.png" alt="S-Superjumper" class="product-image">
-                        <div class="product-info">
+                    <div class="producto-tarjeta">
+                        <img src="images/bike.png" alt="superjumper" class="producto-imagen">
+                        <div class="info-producto">
                             <h3>S-SUPERJUMPER</h3>
                             <p>AR$ 400.000</p>
                         </div>

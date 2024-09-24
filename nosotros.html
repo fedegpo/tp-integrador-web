@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .logo {
+            font-size: 22px;
+            color: red;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: none;
+        }
+
+        .logo a  {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row;
+            background-image: url('images/nosotros-img.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100%;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 1.1;
+            position: absolute;
+            top: 40%;
+            left: 20px;
+            max-width: 600px;
+        }
+
+        .hero p {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 14px;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><h1>Flugel</h1></a></div>
+        <nav>
+            <ul>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Redefiniendo<br> el placer de<br> viajar</h1>
+            <p>
+                Nos impulsa nuestra apasionada búsqueda de elevar lo cotidiano y crear experiencias ciclistas únicas que
+                vayan más allá de lo común. Creemos firmemente en el poder del ciclismo para inspirar una sensación de
+                aventura, autodescubrimiento y emoción. Con la innovación y la calidad como guías, nos esforzamos por
+                superar los límites, redefinir el arte del ciclismo y desbloquear las infinitas posibilidades que
+                aguardan sobre dos ruedas.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
