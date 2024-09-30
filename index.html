@@ -5,122 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velocidad Flugel</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: white;
-        }
-
-        .logo {
-            font-size: 22px;
-            color: red;
-            font-weight: bold;
-            font-style: italic;
-            text-decoration: none;
-        }
-
-        .logo a  {
-            text-decoration: none;
-            color: inherit;
-        }
-
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .hero {
-            position: relative;
-            display: flex;
-            text-align: center;
-            background-image: url('images/hero.png');
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            padding: 4em 3em;
-            margin: 4em 3em;
-            border-radius: 1.5rem;
-        }
-
-        .titulo {
-            font-size: 128px;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .recomendacion {
-            margin: 3.5em 0;
-        }
-
-        .recomendacion h2 {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .recomendacion a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .producto-tarjeta {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-            text-align: left;
-        }
-
-        .producto-imagen {
-            width: 100%;
-            height: auto;
-            max-width: 300px;
-        }
-
-        .info-producto h3 {
-            font-size: 20px;
-            margin: 10px 0;
-        }
-
-        .info-producto p {
-            font-size: 16px;
-            color: gray;
-        }
-
-        .eslogan {
-            font-size: 36px;
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -128,14 +13,28 @@
         <div class="logo"><a href="index.html"><h1>Flugel</h1></a></div>
         <nav>
             <ul>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="articulo.html">Artículo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h1 class="titulo">VELOCIDAD FLUGEL</h1>
+        <section class="carousel-container">
+            <img id="carousel-image" src="images/bike.png" alt="Imagen de producto">
+            <button onclick="prevImage()"><?xml version="1.0" encoding="iso-8859-1"?>
+                <svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                     viewBox="0 0 476.213 476.213" xml:space="preserve">
+                <polygon points="476.213,223.107 57.427,223.107 151.82,128.713 130.607,107.5 0,238.106 130.607,368.714 151.82,347.5 
+                    57.427,253.107 476.213,253.107 "/>
+                </svg></button>
+            <button onclick="nextImage()"><?xml version="1.0" encoding="utf-8"?>
+                <svg fill="#ffffff" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m1304.824 345.002-81.25 81.249 476.466 476.582H0v114.922h1700.04l-476.466 476.465 81.25 81.25L1920 960.293z" fill-rule="evenodd"/>
+                </svg></button>
+        </section>
+
         <section class="hero">
             <div class="recomendacion">
                 <a href="">
@@ -149,9 +48,10 @@
                     </div>
                 </a>
             </div>
-            <p class="eslogan">Eleva tu viaje</p>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

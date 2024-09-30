@@ -1,0 +1,117 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(images/hero.png);
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: white;
+}
+
+.logo {
+    font-size: 22px;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.logo a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.col {
+    width: 30%;
+    padding: 1rem;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.carousel-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+button {
+    padding: 10px;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hero{
+    color: black;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.hero a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.recomendacion{
+    position: absolute;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: white;
+}
