@@ -1,4 +1,4 @@
-let images = ["images/bike.png", "images/bike-2.webp", "images/bike-3.png"];
+let images = ["images/bike.png", "images/bike-2.webp", "images/bike-3.png", "images/bike-4.jpg", "images/bike-5.jpg"];
 let currentIndex = 0;
 
 function showImage(index) {

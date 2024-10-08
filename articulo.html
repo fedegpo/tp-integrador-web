@@ -10,27 +10,40 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-style: italic;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'copperplate', fantasy;
+            background-size: cover;
+
         }
 
         header {
-            display: flex;
+           
             position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            width: 100%;
+            height: 80px;
+            padding: 1em;
+            background-color: black;
+            z-index: 1000;
+
         }
 
         .logo {
-            font-size: 22px;
-            color: red;
+            font-size: 28px;
+            color: rgb(255, 0, 0);
+            font-family: 'copperplate', fantasy;
             font-weight: bold;
             font-style: italic;
             text-decoration: none;
+            display: flex; 
+            align-items: center;
         }
 
         .logo a  {
@@ -46,6 +59,7 @@
         }
 
         nav ul li a {
+            font-family: 'copperplate', fantasy;
             text-decoration: none;
             color: white;
             font-size: 24px;

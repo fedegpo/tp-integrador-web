@@ -6,35 +6,51 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'copperplate', fantasy;
     background-image: url(images/hero.png);
     background-size: cover;
+    padding-top: 50px;
 }
 
 header {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
     padding: 1em;
     background-color: white;
+    z-index: 1000;
 }
-
+.logo-img {
+    width: 100px; /* Ajusta el tamaño según necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 0.5px; /* Espacio entre el GIF y el texto */
+}
 .logo {
-    font-size: 22px;
-    color: red;
+    font-size: 28px;
+    color: rgb(255, 0, 0);
+    font-family: 'copperplate', fantasy;
     font-weight: bold;
     font-style: italic;
     text-decoration: none;
+    display: flex; 
+    align-items: center; 
 }
 
 .logo a {
     text-decoration: none;
-    color: red;
+    color: rgb(255, 0, 0);
     font-weight: bold;
     font-style: italic;
 }
 
 nav ul {
+    font-style: italic;
     list-style: none;
     display: flex;
     gap: 20px;
@@ -47,15 +63,27 @@ nav ul li a {
     font-weight: bold;
 }
 
-h1 {
+main h1 {
+    font-style: italic;
+    font-family: 'copperplate', fantasy;
+    color: black;
+    font-size: 2.5em;
     text-align: center;
-    margin: 2rem 0;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: space-around;
+main p {
+    font-style: italic;
+    font-family: 'copperplate', fantasy;
+    color: #555555;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 1em;
 }
+
+
 
 .col {
     width: 30%;
@@ -65,15 +93,33 @@ h1 {
 }
 
 .carousel-container {
+    position: relative; 
     text-align: center;
     margin: 2rem 0;
 }
 
-button {
-    padding: 10px;
-    margin: 0.5rem;
-    cursor: pointer;
+.carousel-container img {
+    width: 600px;
+    height: 400px; 
+    
 }
+.carousel-container button {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px; 
+    padding: 10px;
+    opacity: 0.8;
+    }
+    .carousel-container button:first-of-type {  
+    left: 10px; 
+    }
+    .carousel-container button:last-of-type {
+    right: 10px;
+    }
 
 #contact-form {
     display: flex;
