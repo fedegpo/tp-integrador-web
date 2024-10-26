@@ -20,7 +20,6 @@
         }
 
         header {
-           
             position: fixed;
             top: 0;
             left: 0;
@@ -34,16 +33,22 @@
             z-index: 1000;
 
         }
+        .logo-img {
+            width: 100px; /* Ajusta el tamaño según necesites */
+            height: auto; /* Mantiene la proporción de la imagen */
+            margin-right: 0.5px; /* Espacio entre el GIF y el texto */
+            border-radius: 50%;
+        }
 
         .logo {
             font-size: 28px;
             color: rgb(255, 0, 0);
             font-family: 'copperplate', fantasy;
-            font-weight: bold;
+            font-weight: normal;
             font-style: italic;
             text-decoration: none;
             display: flex; 
-            align-items: center;
+            align-items: center; 
         }
 
         .logo a  {
@@ -63,7 +68,7 @@
             text-decoration: none;
             color: white;
             font-size: 30px;
-            font-weight: bold;
+            
         }
 
         .hero {
@@ -78,20 +83,22 @@
         }
 
         .hero h1 {
+            
             font-size: 60px;
-            font-weight: bold;
             line-height: 1.1;
             position: absolute;
-            top: 40%;
+            top: 25%;
             left: 20px;
             max-width: 600px;
         }
 
         .hero p {
+            font-style: italic;
+            font-family: arial;
             position: absolute;
             bottom: 20px;
             left: 20px;
-            font-size: 14px;
+            font-size: 20px;
             max-width: 500px;
             line-height: 1.5;
         }
@@ -100,11 +107,15 @@
 
 <body>
     <header>
-        <div class="logo"><a href="index.html"><h1>Flugel</h1></a></div>
+        <div class="logo">
+            <img src="images/logo.png" alt="Imagen de logo" class="logo-img">
+                <a href="index.html">
+                <h1>Flugel</h1>
+                </a></div>
         <nav>
             <ul>
-                <li><a href="articulo.html">Artículo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="articulo.html">ARTICULOS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
@@ -127,6 +138,7 @@
                     
                 </div>
                 <div class="col"></div>
+                
             </div>
         </section>
     </main>

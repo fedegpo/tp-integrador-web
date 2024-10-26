@@ -1,4 +1,4 @@
-let images = ["images/file (1).png", "images/bike-2.webp", "images/file (2).png","images/bike-3.png","images/file (3).png", "images/file (7).png"];
+let images = ["images/file (1).png", "images/bike-2.webp", "images/file (2).png","images/bike-3.png","images/file (3).png", "images/file (4).png", "images/file (5).png", "images/file (6).png", "images/file (7).png", "images/file (8).png", "images/file (9).png", "images/file (10).png", "images/bici-1.png"];
 let currentIndex = 0;
 
 function showImage(index) {
@@ -15,47 +15,74 @@ function prevImage() {
     showImage(currentIndex);
 }
 
-
-document.getElementById('contact-form').addEventListener('submit', function (event) {
+//Validaciones
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    let nombre = document.getElementById('nombre').value;
-    let email = document.getElementById('email').value;
-    let telefono = document.getElementById('telefono').value;
-    let mensaje = document.getElementById('mensaje').value;
+    let valid = true;
 
-    if (validarEmail(email) && validarTelefono(telefono) && validarNombre(nombre)) {
-        let result = `¡Gracias por su mensaje! Recibimos los siguientes datos: Nombre y Apellido: ${nombre}, Correo: ${email}, Teléfono: ${telefono}, Mensaje: ${mensaje}`;
-        document.getElementById('form-result').textContent = result;
-        document.getElementById('form-result').style.color = 'green';
+    const errorList = document.getElementById('errorList');
+    const resultado = document.getElementById('resultado');
+    errorList.innerHTML = '';
+    resultado.style.display = 'none';
+
+    const nombre = document.getElementById('nombre').value;
+    if (!nombre || !/^[a-zA-Z\s]{1,20}$/.test(nombre)) {
+        const li = document.createElement('li');
+        li.textContent = '*Debe contener menos de 20 caracteres.';
+        errorList.appendChild(li);
+        document.getElementById('nombre').classList.add('error');
+        valid = false;
     } else {
-       /* document.getElementById('nombreError').style.display = 'block';
-        document.getElementById('emailError').style.display = 'block';
-        document.getElementById('telefonoError').style.display = 'block';
-        /*Limpiar formulario
-        nombre.value="";
-        email.value="";
-        telefono.value="";
-        mensaje.value="";*/
-        
-        document.getElementById('form-result').textContent = 'Error en los datos ingresados.';
-        document.getElementById('form-result').style.color = 'red';
+        document.getElementById('nombre').classList.remove('error');
     }
-    
 
+    const telefono = document.getElementById('telefono').value;
+    if (!telefono || !/^\+549[0-9]{10}$/.test(telefono)) {
+        const li = document.createElement('li');
+        li.textContent = '*Ingrese un número telefónico válido.';
+        errorList.appendChild(li);
+        document.getElementById('telefono').classList.add('error');
+        valid = false;
+    } else {
+        document.getElementById('telefono').classList.remove('error');
+    }
+
+    const email = document.getElementById('email').value;
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+        const li = document.createElement('li');
+        li.textContent = '*Ingrese un correo electrónico válido.';
+        errorList.appendChild(li);
+        document.getElementById('email').classList.add('error');
+        valid = false;
+    } else {
+        document.getElementById('email').classList.remove('error');
+    }
+
+    const mensaje = document.getElementById('mensaje').value;
+    /*if (!mensaje) {
+        const li = document.createElement('li');
+        li.textContent = '*Debe agregar un mensaje.';
+        errorList.appendChild(li);
+        document.getElementById('mensaje').classList.add('error');
+        valid = false;
+    } else {
+        document.getElementById('nombre').classList.remove('error');
+    }*/
+
+
+    if (!valid) {
+        return;
+    }
+
+    resultado.innerHTML = `
+        <h3>Datos ingresados:</h3>
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Telefono:</strong> ${telefono}</p>
+        <p><strong>Correo Electronico:</strong> ${email}</p>
+        <p><strong>Mensaje:</strong> ${mensaje}</p>
+        `;
+
+    resultado.style.display = 'block';
+    document.getElementById('contactForm').reset();
 });
-
-function validarEmail(email) {
-    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
-
-function validarTelefono(telefono) {
-    let regex = /^[0-9]{10}$/;
-    return regex.test(telefono);
-}
-
-function validarNombre(nombre) {
-    let regex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ]{1,50}$/;
-    return regex.test(nombre);
-}
