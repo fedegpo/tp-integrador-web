@@ -14,6 +14,7 @@
         }
 
         body {
+            padding-top: 80px; 
             font-family: 'copperplate', fantasy;
             background-size: cover;
 
@@ -81,22 +82,12 @@
             background-position: center;
             color: white;
         }
-        .hero {
-            display: flex;
-            flex-direction: row;
-            background-image: url('images/nosotros-img.png');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            width: 100%;
-            color: white;
-        }
 
         .hero h1 {
             font-size: 60px;
             font-weight: normal;
             line-height: 1.1;
-            position: absolute;
+            position: z-index;
             top: 20%;
             left: 20px;
             max-width: 600px;
@@ -104,14 +95,14 @@
 
         .hero p {
             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-            position: absolute;
+            position: z-index;
             bottom: 20px;
             left: 20px;
             font-size: 20px;
             max-width: 500px;
             line-height: 1.5;
         }
-        
+
         .content {
             display: flex;
             flex-wrap: wrap; /* Permite que las columnas se ajusten a diferentes tamaños de pantalla */
@@ -119,6 +110,8 @@
         }
 
         .col {
+            align-items: flex-end;
+           
             width: 45%; /* Ajusta el ancho de cada columna según sea necesario */
             padding: 20px;
             box-sizing: border-box;
@@ -128,16 +121,32 @@
             list-style: none;
             padding: 0;
         }
-
+        .col1 {
+            margin-top: 100px;
+            
+            margin-left: 1000%;
+            flex-grow: 1; /* Permite que la columna se expanda para ocupar el espacio restante */
+            margin-left: 20px; /* Ajusta el margen izquierdo según sea necesario */
+        }
         .col li {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
         }
 
-        .col img {
+        
+        .column-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .column-list img {
             width: 150px; /* Ajusta el tamaño de las imágenes */
             margin-right: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -171,15 +180,15 @@
                         aguardan sobre dos ruedas.
                     </p>
                 </div>
-                <div class="col">
+                <div class="col1">
                     <h2>Protección y Repuestos</h2>
-                    <ul>
+                    <ul class="column-list">
                         <li>Cascos</li>
                         <img src="images/casco.webp" alt="Cascos">
                         <li>Luces</li>
-                        <img src="images/luces.webp" alt="Recomendación 2">
+                        <img src="images/luces.webp" alt="Luces">
                         <li>Cámaras</li>
-                        <img src="images/camara.webp" alt="Recomendación 2">
+                        <img src="images/camara.webp" alt="Cámaras">
                     </ul>
                 </div>
                 
