@@ -27,9 +27,9 @@ header {
 }
 
 .logo-img {
-    width: 100px; /* Ajusta el tamaño según necesites */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-right: 0.5px; /* Espacio entre el GIF y el texto */
+    width: 100px;
+    height: auto; 
+    margin-right: 0.5px; 
 }
 
 .logo {
@@ -161,8 +161,6 @@ button {
     cursor: pointer;
 }
 
-
-
 .recomendaciones {
     display: flex;
     flex-wrap: wrap;
@@ -197,20 +195,20 @@ main h2 {
 }
 
 .info-producto {
-    margin-top: 10px; /* Space between image and info */
+    margin-top: 10px; 
     margin-bottom: 20px;
 }
   
 .info-producto h3 {
     font-family: 'copperplate', fantasy;
-    font-size: 32px; /* Adjust font size for product name */
-    margin-bottom: 5px; /* Space between name and price */
+    font-size: 32px;
+    margin-bottom: 5px; 
 }
   
 .info-producto p {
     font-family: 'copperplate', fantasy;
-    font-weight: bold; /* Make price visually distinct */
-    color: #333; /* Darker color for price */
+    font-weight: bold; 
+    color: #333; 
 }
 
 footer {
